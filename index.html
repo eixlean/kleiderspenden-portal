@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kleiderspenden-Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="img/Annalena.jpg" alt="Logo" />
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Über uns</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Kleiderspenden-Portal</h1>
+        <form id="spendenForm">
+            <label for="uebergabeArt">Uebergabeart:</label>
+            <select id="uebergabeArt" name="uebergabeArt" required>
+                <option value="">Bitte wählen</option>
+                <option value="geschaeftsstelle">Uebergabe an der Geschaeftsstelle</option>
+                <option value="abholung">Abholung</option>
+            </select>
+
+            <div id="abholungDetails" style="display:none;">
+                <label for="adresse">Abholadresse:</label>
+                <input type="text" id="adresse" name="adresse">
+            </div>
+
+            <label for="kleidungArt">Art der Kleidung:</label>
+            <input type="text" id="kleidungArt" name="kleidungArt" required>
+
+            <label for="krisengebiet">Krisengebiet:</label>
+            <select id="krisengebiet" name="krisengebiet" required>
+                <option value="">Bitte wählen</option>
+                <option value="gebiet1">Gebiet 1</option>
+                <option value="gebiet2">Gebiet 2</option>
+            </select>
+
+            <button type="submit">Spende registrieren</button>
+        </form>
+
+        <div id="confirmation" style="display:none;">
+            <h2>Registrierung erfolgreich</h2>
+            <p id="confirmationDetails"></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Rechtliche Hinweise</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
